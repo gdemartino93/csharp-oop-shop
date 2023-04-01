@@ -9,13 +9,13 @@ namespace csharp_oop_shop
 {
     internal class Product
     {
-        private int codiceProdotto;
+        private string codiceProdotto;
         private string nome;
         private string descrizione;
         private decimal prezzo;
         private int iva;
         //codice prodotto readonly
-        public int CodiceProdotto { get
+        public string CodiceProdotto { get
             {
                 return codiceProdotto;
             }}
@@ -27,11 +27,11 @@ namespace csharp_oop_shop
 
         public Product()
         {
-            codiceProdotto = new Random().Next(1, 1000000);
+            codiceProdotto = new Random().Next(1, 1000000).ToString();
         }
         public Product( string nome, string descrizione, decimal prezzo, int iva)
         {
-            codiceProdotto = new Random().Next(1, 1000000);
+            codiceProdotto = new Random().Next(1, 1000000).ToString();
             Nome = nome;
             Descrizione = descrizione;
             Prezzo = prezzo;
@@ -46,6 +46,18 @@ namespace csharp_oop_shop
         public void FullName()
         {
            Console.WriteLine($"{codiceProdotto} - {Nome}");
+        }
+        public string PadLeft(string codice)
+        {
+            int lunghezza = codice.Length;
+            if ( lunghezza >= 8 )
+            {
+                return codice;
+            }
+            else
+            {
+                return codice.PadLeft(8, '0');
+            }
         }
     }
 

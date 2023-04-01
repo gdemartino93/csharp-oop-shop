@@ -10,6 +10,7 @@
             Console.WriteLine(nuovo.CodiceProdotto);
             Console.WriteLine(nuovo.Prezzo);
             nuovo.FullName();
+            Console.WriteLine(nuovo.PadLeft(nuovo.CodiceProdotto));
         }
     }
 }
