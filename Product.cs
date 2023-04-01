@@ -37,10 +37,15 @@ namespace csharp_oop_shop
             Prezzo = prezzo;
             Iva = iva;
         }
+   
         public decimal FullPrice()
         {
             decimal prezzoTotale = Prezzo + (Prezzo * Iva / 100);
             return prezzoTotale;
+        }
+        public void FullName()
+        {
+           Console.WriteLine($"{codiceProdotto} - {Nome}");
         }
     }
 
