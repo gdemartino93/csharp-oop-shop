@@ -14,6 +14,7 @@ namespace csharp_oop_shop
         private string descrizione;
         private decimal prezzo;
         private int iva;
+        //codice prodotto readonly
         public int CodiceProdotto { get
             {
                 return codiceProdotto;
