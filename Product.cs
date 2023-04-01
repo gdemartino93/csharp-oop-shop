@@ -13,5 +13,15 @@ namespace csharp_oop_shop
         public string Descrizione { get; set; }
         public decimal Prezzo { get; set; }
         public int Iva { get; set; }
+
+        public Product(int codiceProdotto, string nome, string descrizione, decimal prezzo, int iva)
+        {
+            codiceProdotto = CodiceProdotto;
+            nome = Nome;
+            descrizione = Descrizione;
+            prezzo = Prezzo;
+            Iva = iva;
+        }
     }
+
 }
